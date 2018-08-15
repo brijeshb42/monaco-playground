@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Monaco Playground</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+  <!-- <section class="section"> -->
+    <div class="container">
+      <div class="toolbar">
+        <label>
+          Syntax
+          <select class="hidden" id="language-select"></select>
+        </label>
+        <label title="Works good enough">
+          Theme
+          <select class="hidden" id="theme-select"></select>
+        </label>
+        <label>
+          <input id="minimap" type="checkbox" checked />
+          Minimap
+        </label>
+        <label title="Rough around the edges. Some functionalities might not work">
+          <input id="vim" type="checkbox" />
+          Vim (Rough around the edges)
+        </label>
+      </div>
+      <div id="editor" class="editor-monaco"></div>
+      <div id="vim-statusbar" class="vim-statusbar" style="display: none"></div>
+    </div>
+  <!-- </section> -->
+</body>
+</html>
