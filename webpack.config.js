@@ -24,6 +24,13 @@ module.exports = {
     globalObject: 'self',
     chunkFilename: '[name].[chunkhash].js',
   },
+  resolve: {
+    extensions: ['.ts', '.tsx', '.js', '.json'],
+    alias: {
+      'monaco-vim': path.join(__dirname, 'src', 'vim'),
+      'vscode': path.join(__dirname, 'monaco-editor'),
+    },
+  },
   optimization: {
     runtimeChunk: 'single',
   },
@@ -37,6 +44,10 @@ module.exports = {
           compact: false,
         },
       },
+    }, {
+      test: /\.tsx?$/,
+      exclude: /node_modules/,
+      use: 'ts-loader',
     }, {
       test: /\.css$/,
       use: [

@@ -3,7 +3,6 @@ import themeList from 'monaco-themes/themes/themelist.json'
 
 import registerLanguage from './languages/register';
 
-// import 'bulma/css/bulma.css';
 import './index.css';
 
 const availableLanguages = preval`
@@ -90,6 +89,7 @@ const langNode = document.getElementById('language-select');
 const themeNode = document.getElementById('theme-select');
 const minimapNode = document.getElementById('minimap');
 const vimNode = document.getElementById('vim');
+const emacsNode = document.getElementById('emacs');
 
 monaco.languages.getLanguages().forEach((lang) => {
   const opt = document.createElement('option');
@@ -172,8 +172,14 @@ minimapNode.addEventListener('change', function(ev) {
 });
 
 let vimAdapter;
+let emacsMode;
 vimNode.addEventListener('change', function(ev) {
   if (ev.target.checked) {
+    if (emacsMode) {
+      emacsNode.checked = false;
+      emacsMode.dispose();
+      emacsMode = null;
+    }
     import('./cm/vim')
       .then(({ attachVim }) => {
         vimAdapter = attachVim(editor, document.getElementById('vim-statusbar'));
@@ -183,6 +189,26 @@ vimNode.addEventListener('change', function(ev) {
     vimAdapter.dispose();
     vimAdapter = null;
     document.getElementById('vim-statusbar').innerHTML = '';
+  }
+  editor.focus();
+});
+
+emacsNode.addEventListener('change', function(ev) {
+  if (ev.target.checked) {
+    if (vimAdapter) {
+      vimNode.checked = false;
+      vimAdapter.dispose();
+      vimAdapter = null;
+    }
+    import('./emacs/')
+      .then(({ EmacsExtension }) => {
+        emacsMode = new EmacsExtension(editor);
+        emacsMode.start();
+        editor.focus();
+      });
+  } else if (emacsMode) {
+    emacsMode.dispose();
+    emacsMode = null;
   }
   editor.focus();
 });
