@@ -232,9 +232,9 @@ vimNode.addEventListener('change', function(ev) {
   if (ev.target.checked) {
     disposeModes();
     vimNode.checked = true;
-    import('./cm/vim')
-      .then(({ attachVim }) => {
-        vimAdapter = attachVim(editor, statusNode);
+    import('monaco-vim')
+      .then(({ initVimMode }) => {
+        vimAdapter = initVimMode(editor, statusNode);
         editor.focus();
       });
   } else {
