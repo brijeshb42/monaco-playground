@@ -5,6 +5,42 @@ import registerLanguage from './languages/register';
 
 import './index.css';
 
+class HelpWidget {
+  static ID = 'extension.emacs.help.widget';
+  constructor() {
+    this._dom = document.createElement('div');
+    this._dom.setAttribute('class', 'extension-emacs-help-widget');
+    this._dom.setAttribute('tabIndex', 0);
+    this._dom.style.visibility = 'hidden';
+    this._dom.addEventListener('blur', this.onBlur);
+  }
+
+  getId() {
+    return HelpWidget.ID;
+  }
+  getDomNode() {
+    return this._dom;
+  }
+  getPosition() {
+    return {
+      preference: monaco.editor.OverlayWidgetPositionPreference.TOP_CENTER,
+    }
+  }
+
+  onBlur = () => {
+    this._dom.style.visibility = 'hidden';
+    this._dom.textContent = '';
+  }
+
+  show(text) {
+    this._dom.style.visibility = 'visible';
+    this._dom.innerHTML = text;
+    this._dom.focus();
+  }
+}
+
+let helpWidget = new HelpWidget();
+
 const availableLanguages = preval`
   const fs = require('fs');
   const path = require('path');
@@ -90,6 +126,7 @@ const themeNode = document.getElementById('theme-select');
 const minimapNode = document.getElementById('minimap');
 const vimNode = document.getElementById('vim');
 const emacsNode = document.getElementById('emacs');
+const statusNode = document.getElementById('vim-statusbar');
 
 monaco.languages.getLanguages().forEach((lang) => {
   const opt = document.createElement('option');
@@ -173,42 +210,71 @@ minimapNode.addEventListener('change', function(ev) {
 
 let vimAdapter;
 let emacsMode;
-vimNode.addEventListener('change', function(ev) {
-  if (ev.target.checked) {
-    if (emacsMode) {
-      emacsNode.checked = false;
-      emacsMode.dispose();
-      emacsMode = null;
-    }
-    import('./cm/vim')
-      .then(({ attachVim }) => {
-        vimAdapter = attachVim(editor, document.getElementById('vim-statusbar'));
-        editor.focus();
-      });
-  } else if (vimAdapter) {
+
+function disposeModes() {
+  if (vimAdapter) {
     vimAdapter.dispose();
     vimAdapter = null;
-    document.getElementById('vim-statusbar').innerHTML = '';
+    vimNode.checked = false;
+  }
+
+  if (emacsMode) {
+    emacsMode.dispose();
+    emacsMode = null;
+    emacsNode.checked = false;
+  }
+
+  editor.removeOverlayWidget(helpWidget);
+  statusNode.style.display = 'none';
+  statusNode.innerHTML = '';
+}
+vimNode.addEventListener('change', function(ev) {
+  if (ev.target.checked) {
+    disposeModes();
+    vimNode.checked = true;
+    import('./cm/vim')
+      .then(({ attachVim }) => {
+        vimAdapter = attachVim(editor, statusNode);
+        editor.focus();
+      });
+  } else {
+    disposeModes();
   }
   editor.focus();
 });
 
 emacsNode.addEventListener('change', function(ev) {
   if (ev.target.checked) {
-    if (vimAdapter) {
-      vimNode.checked = false;
-      vimAdapter.dispose();
-      vimAdapter = null;
-    }
-    import('./emacs/')
-      .then(({ EmacsExtension }) => {
+    disposeModes();
+    emacsNode.checked = true;
+    import('monaco-emacs')
+      .then(({ EmacsExtension, registerGlobalCommand, getAllMappings }) => {
+        registerGlobalCommand('C-h', {
+          description: 'Show this help command',
+          run() {
+            const data = getAllMappings();
+            console.log(data);
+            const res = Object.keys(data).map(key => [key, data[key]]).map(([k, v]) => {
+              return `<li>${k} - ${v}</li>`;
+            }).join('\n');
+            helpWidget.show(`<ul>${res}</ul>`);
+          }
+        });
+
         emacsMode = new EmacsExtension(editor);
+        editor.addOverlayWidget(helpWidget);
+        statusNode.style.display = 'block';
+        emacsMode.onDidMarkChange((ev) => {
+          statusNode.textContent = ev ? 'Mark Set!' : 'Mark Unset';
+        });
+        emacsMode.onDidChangeKey((str) => {
+          statusNode.textContent = str;
+        });
         emacsMode.start();
         editor.focus();
       });
-  } else if (emacsMode) {
-    emacsMode.dispose();
-    emacsMode = null;
+  } else {
+    disposeModes();
   }
   editor.focus();
 });

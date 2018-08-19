@@ -25,9 +25,11 @@ body {
 }
 
 .vim-statusbar {
+    display: block;
     background: #eee;
     padding: 5px;
     font-family: monospace;
+    height: 15px;
 }
 
 .vim-statusbar input[type=text] {
@@ -35,4 +37,20 @@ body {
     border: none;
     outline: none;
     font-family: monospace;
+}
+
+.extension-emacs-help-widget {
+    width: 400px;
+    max-height: 300px;
+    overflow-y: scroll;
+}
+
+.vs .extension-emacs-help-widget {
+    background: #fff;
+    color: #111;
+}
+
+.vs-dark .extension-emacs-help-widget, .hc-black .extension-emacs-help-widget {
+    background: #111;
+    color: #fff;
 }

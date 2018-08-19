@@ -17,6 +17,7 @@
     "bulma": "^0.7.1",
     "lodash.throttle": "^4.1.1",
     "monaco-editor": "^0.14.2",
+    "monaco-emacs": "../Vim",
     "monaco-themes": "^0.2.3"
   },
   "devDependencies": {
