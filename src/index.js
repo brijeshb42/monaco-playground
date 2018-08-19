@@ -182,6 +182,7 @@ function onLanguageChange(ev) {
         editor.setValue(text);
       });
   }
+  gtag('event', 'language', {value});
 }
 
 function onThemeChange(ev) {
@@ -193,6 +194,7 @@ function onThemeChange(ev) {
       monaco.editor.setTheme(value);
     });
   }
+  gtag('event', 'theme', {value});
   editor.focus();
 }
 
@@ -240,6 +242,10 @@ vimNode.addEventListener('change', function(ev) {
   } else {
     disposeModes();
   }
+  gtag('event', 'mode-vim', {
+    type: 'vim',
+    action: ev.target.checked ? 'enabled' : 'disabled',
+  });
   editor.focus();
 });
 
@@ -277,6 +283,10 @@ emacsNode.addEventListener('change', function(ev) {
     disposeModes();
   }
   editor.focus();
+  gtag('event', 'mode-emacs', {
+    type: 'emacs',
+    action: ev.target.checked ? 'enabled' : 'disabled',
+  });
 });
 
 langNode.style.display = 'initial';
