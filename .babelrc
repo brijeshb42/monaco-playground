@@ -1,4 +1,4 @@
 {
   "presets": ["env"],
-  "plugins": ["preval", "syntax-dynamic-import", "transform-class-properties"]
+  "plugins": ["syntax-dynamic-import", "transform-class-properties"]
 }

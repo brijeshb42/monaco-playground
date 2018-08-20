@@ -1,11 +1,7 @@
 const path = require('path');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
-const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const cssnano = require('cssnano');
-const autoprefixer = require('autoprefixer');
 const MonacoWebpackPlugin = require('monaco-editor-webpack-plugin');
 
 module.exports = {
@@ -37,10 +33,6 @@ module.exports = {
           compact: false,
         },
       },
-    }, {
-      test: /\.tsx?$/,
-      exclude: /node_modules/,
-      use: 'ts-loader',
     }, {
       test: /\.css$/,
       use: [

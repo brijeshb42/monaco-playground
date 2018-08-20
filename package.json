@@ -13,7 +13,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "lodash.throttle": "^4.1.1",
     "monaco-ace-tokenizer": "^0.1.0",
     "monaco-editor": "0.14.3",
     "monaco-emacs": "../monaco-emacs/local",
@@ -22,25 +21,18 @@
   },
   "devDependencies": {
     "@types/es6-shim": "^0.31.37",
-    "autoprefixer": "^9.1.1",
     "babel-core": "^6.26.3",
     "babel-loader": "^7.1.5",
-    "babel-plugin-preval": "^3.0.0",
     "babel-plugin-syntax-dynamic-import": "^6.18.0",
     "babel-plugin-transform-class-properties": "^6.24.1",
     "babel-preset-env": "^1.7.0",
     "css-loader": "^1.0.0",
-    "cssnano": "^4.0.5",
     "html-webpack-plugin": "^3.2.0",
     "mini-css-extract-plugin": "^0.4.1",
     "monaco-editor-webpack-plugin": "^1.5.1",
-    "optimize-css-assets-webpack-plugin": "^5.0.0",
     "style-loader": "^0.22.1",
-    "ts-loader": "^4.4.2",
-    "typescript": "^3.0.1",
     "webpack": "^4.16.5",
     "webpack-cli": "^3.1.0",
-    "webpack-dev-server": "^3.1.5",
-    "worker-loader": "^2.0.0"
+    "webpack-dev-server": "^3.1.5"
   }
 }
