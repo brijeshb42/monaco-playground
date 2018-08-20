@@ -10,7 +10,6 @@
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-
   gtag('config', 'UA-124254488-1');
 </script>
 </head>
@@ -25,6 +24,7 @@
         <label title="Works good enough">
           Theme
           <select class="hidden" id="theme-select"></select>
+          <a href="https://github.com/brijeshb42/monaco-themes">Github</a>
         </label>
         <label>
           <input id="minimap" type="checkbox" checked />
@@ -32,11 +32,11 @@
         </label>
         <label title="Rough around the edges. Some functionalities might not work">
           <input id="vim" type="checkbox" />
-          Vim (Rough around the edges)
+          Vim <a href="https://github.com/brijeshb42/monaco-vim">Fork on Github</a>
         </label>
         <label title="Some of the functionalities are implemented">
           <input id="emacs" type="checkbox" />
-          Emacs (In Progress)
+          Emacs
         </label>
       </div>
       <div id="editor" class="editor-monaco"></div>
