@@ -3210,9 +3210,9 @@ monaco-themes@^0.2.3:
   dependencies:
     fast-plist "^0.1.2"
 
-monaco-vim@^0.0.1:
-  version "0.0.1"
-  resolved "https://registry.yarnpkg.com/monaco-vim/-/monaco-vim-0.0.1.tgz#ce1334ac29b567bceadcae948e888610befbc110"
+monaco-vim@0.0.2:
+  version "0.0.2"
+  resolved "https://registry.yarnpkg.com/monaco-vim/-/monaco-vim-0.0.2.tgz#7933a5fc7fb805bbe3faa2747b598924027dd806"
   dependencies:
     monaco-editor "^0.14.0"
 
