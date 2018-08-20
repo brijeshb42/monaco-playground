@@ -1,7 +1,6 @@
 import * as monaco from 'monaco-editor';
 import themeList from 'monaco-themes/themes/themelist.json'
-
-import registerLanguage from './languages/register';
+import { registerAllAvailableLanguages } from 'monaco-ace-tokenizer/lib/lazy';
 
 import './index.css';
 
@@ -41,21 +40,7 @@ class HelpWidget {
 
 let helpWidget = new HelpWidget();
 
-const availableLanguages = preval`
-  const fs = require('fs');
-  const path = require('path');
-  const langPath = path.join(process.cwd(), 'src', 'languages', 'ace', 'definitions');
-  const langFiles = fs.readdirSync(langPath);
-  module.exports = langFiles.map(lang => lang.split('.')[0]);
-`;
-
-availableLanguages.forEach(lang => {
-  if (monaco.languages.getLanguages().find(l => l.id === lang)) {
-    return;
-  }
-  registerLanguage(lang);
-});
-
+registerAllAvailableLanguages();
 
 const lightThemes = [{
   label: 'VS',
@@ -97,6 +82,10 @@ function loadTheme(value) {
 }
 
 const codeSamples = {
+  'elixir': {
+    text: '',
+    url: 'https://raw.githubusercontent.com/phoenixframework/phoenix/master/lib/phoenix/router/route.ex',
+  },
   coffeescript: {
     text: '',
     url: 'https://raw.githubusercontent.com/cypress-io/cypress/develop/packages/electron/lib/electron.coffee',
