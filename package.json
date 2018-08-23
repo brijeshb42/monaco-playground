@@ -17,7 +17,7 @@
     "monaco-editor": "0.14.3",
     "monaco-emacs": "^0.1.0",
     "monaco-themes": "^0.2.3",
-    "monaco-vim": "^0.0.4"
+    "monaco-vim": "0.0.5"
   },
   "devDependencies": {
     "@types/es6-shim": "^0.31.37",
