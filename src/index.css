@@ -27,9 +27,10 @@ body {
 .vim-statusbar {
     display: block;
     background: #eee;
-    padding: 5px;
+    padding: 4px 2px;
     font-family: monospace;
     height: 15px;
+    line-height: 15px;
 }
 
 .vim-statusbar input[type=text] {
