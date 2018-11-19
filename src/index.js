@@ -153,7 +153,7 @@ editor.focus();
 
 function onLanguageChange(ev) {
   const value =   (typeof ev === 'string') ? ev : ev.target.value;
-  monaco.editor.setModelLanguage(editor.model, value);
+  monaco.editor.setModelLanguage(editor.getModel(), value);
   editor.setValue('');
   editor.focus();
 
