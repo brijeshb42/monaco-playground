@@ -17,7 +17,7 @@ module.exports = {
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: '[name].js',
+    filename: '[name].[chunkhash].js',
     globalObject: 'self',
     chunkFilename: '[name].[chunkhash].js',
   },

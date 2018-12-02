@@ -3174,10 +3174,10 @@ monaco-themes@^0.2.3:
   dependencies:
     fast-plist "^0.1.2"
 
-monaco-vim@0.0.8:
-  version "0.0.8"
-  resolved "https://registry.yarnpkg.com/monaco-vim/-/monaco-vim-0.0.8.tgz#dc06fbd8b03c1a53abadeba2391eefccbd9770d0"
-  integrity sha512-ZtRwgrGyQjNc/G1BVo0X9cjXXr/lsoI5UoyJRwqvwCHfSfl3HSfzULFlSAz+yKKgPwzIgyyG7McTcxejApk1dw==
+monaco-vim@0.0.9:
+  version "0.0.9"
+  resolved "https://registry.yarnpkg.com/monaco-vim/-/monaco-vim-0.0.9.tgz#1a793c999ae30429018d964d0c7f9dd2f9572dc3"
+  integrity sha512-w/rGZJN9euszoKQPjis+QHegvathrRBZKGe29xLEa0srv79jncg7erc+fxgm8HDnhWEbWo6nJd3qs2bDmUEqYA==
 
 move-concurrently@^1.0.1:
   version "1.0.1"
