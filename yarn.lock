@@ -4476,17 +4476,17 @@ monaco-editor@0.15.5:
   resolved "https://registry.yarnpkg.com/monaco-editor/-/monaco-editor-0.15.5.tgz#78e8bc2c41c08e75a9ac58b075a87d4db00ee7e7"
   integrity sha512-dp9CbvItTMSlT3h0fIRJRlkpD6VxyP3bNUBbELHDBDJ7EsR/JBpD2DiuqM2tpLEHWEKHwqes7jFklfrf5BxG6Q==
 
-monaco-emacs@^0.1.3:
-  version "0.1.3"
-  resolved "https://registry.yarnpkg.com/monaco-emacs/-/monaco-emacs-0.1.3.tgz#e1c0b3b2e056673e45726cffa3906fec02e8d7c8"
-  integrity sha512-76B+eAqxFcP3wao8keLgrg/JGfoq5bJ6vpuwBRAC6kl8XN0eVvie8LOM835d0NNpKHuIDgkMMIdaKCHuhlqImQ==
+monaco-emacs@^0.1.4:
+  version "0.1.4"
+  resolved "https://registry.yarnpkg.com/monaco-emacs/-/monaco-emacs-0.1.4.tgz#444608eadf8b1fdaa5cb47e3a8cae7b8485f74f9"
+  integrity sha512-2lywDzgcA1eZJzSnlypgqLJV1emRKZffbpfWS6/hIm8/4spgnO2kgPncv05FuJdM7kSvZmbclWiT+lGfw5gR7A==
   dependencies:
     lodash.throttle "^4.1.1"
 
-monaco-themes@^0.2.5:
-  version "0.2.5"
-  resolved "https://registry.yarnpkg.com/monaco-themes/-/monaco-themes-0.2.5.tgz#a12cd45814c44d3fb52da7f2b4eb3f29d673c903"
-  integrity sha512-zcnv80cz4SMI/3fxvY6uVQ2O+4HVvX5eFflnwEgzpQ6fhSFBwTmN6f6VpmyKrR1Wb05BgzYtFHs0zXZEwUMqbw==
+monaco-themes@^0.3.0:
+  version "0.3.0"
+  resolved "https://registry.yarnpkg.com/monaco-themes/-/monaco-themes-0.3.0.tgz#80bfa0fb981212682319e52bf7a31e85832ebbc5"
+  integrity sha512-KmdHrEg5Tw3upXuSBjAAHGFQzna04wFVmOR2dpu4+QfwVmsfrXqCs7gbCrCBpGQOvLrhZ/NV0xLU7qEAUxxdVA==
   dependencies:
     fast-plist "^0.1.2"
 
