@@ -16,7 +16,7 @@
     "monaco-ace-tokenizer": "^0.1.1",
     "monaco-editor": "0.15.5",
     "monaco-emacs": "^0.1.4",
-    "monaco-themes": "^0.3.0",
+    "monaco-themes": "0.3.1",
     "monaco-vim": "0.0.13"
   },
   "devDependencies": {

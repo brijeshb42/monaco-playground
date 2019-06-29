@@ -4483,10 +4483,10 @@ monaco-emacs@^0.1.4:
   dependencies:
     lodash.throttle "^4.1.1"
 
-monaco-themes@^0.3.0:
-  version "0.3.0"
-  resolved "https://registry.yarnpkg.com/monaco-themes/-/monaco-themes-0.3.0.tgz#80bfa0fb981212682319e52bf7a31e85832ebbc5"
-  integrity sha512-KmdHrEg5Tw3upXuSBjAAHGFQzna04wFVmOR2dpu4+QfwVmsfrXqCs7gbCrCBpGQOvLrhZ/NV0xLU7qEAUxxdVA==
+monaco-themes@0.3.1:
+  version "0.3.1"
+  resolved "https://registry.yarnpkg.com/monaco-themes/-/monaco-themes-0.3.1.tgz#1a9bc5e0eac386d92daa2937ffb6b5c58bf7f87c"
+  integrity sha512-LDpnBaBOvsy0VNVazCV23vvUupBe0Qz22r6yDD3F+I5dCmrv03jnKTsZjp+L+xe0eyck6Z9lg9GcLusss2TnOA==
   dependencies:
     fast-plist "^0.1.2"
 
