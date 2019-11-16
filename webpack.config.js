@@ -3,7 +3,7 @@ const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const MonacoWebpackPlugin = require('monaco-editor-webpack-plugin');
-const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
+// const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 
 module.exports = {
   target: 'web',
@@ -23,18 +23,18 @@ module.exports = {
   },
   optimization: {
     runtimeChunk: 'single',
-    minimizer: [
-      new UglifyJsPlugin({
-        cache: true,
-        parallel: true,
-        sourceMap: false,
-        uglifyOptions: {
-          mangle: true,
-          keep_classnames: false,
-          keep_fnames: false,
-        }
-      })
-    ]
+    // minimizer: [
+    //   new UglifyJsPlugin({
+    //     cache: true,
+    //     parallel: true,
+    //     sourceMap: false,
+    //     uglifyOptions: {
+    //       mangle: true,
+    //       keep_classnames: false,
+    //       keep_fnames: false,
+    //     }
+    //   })
+    // ]
   },
   module: {
     rules: [{

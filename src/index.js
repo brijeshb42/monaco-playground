@@ -74,7 +74,7 @@ function loadTheme(value) {
   }
 
   const themePath = themeList[value];
-  return import(`monaco-themes/themes/${themePath}`)
+  return import(/* webpackChunkName: theme/[request] */`monaco-themes/themes/${themePath}`)
     .then((data) => {
       loadedThemes[value] = true;
       monaco.editor.defineTheme(value, data);
@@ -223,7 +223,7 @@ vimNode.addEventListener('change', function(ev) {
   if (ev.target.checked) {
     disposeModes();
     vimNode.checked = true;
-    import('monaco-vim')
+    import(/* webpackChunkName: vim */ 'monaco-vim')
       .then(({ initVimMode }) => {
         vimAdapter = initVimMode(editor, statusNode);
         editor.focus();
@@ -242,7 +242,7 @@ emacsNode.addEventListener('change', function(ev) {
   if (ev.target.checked) {
     disposeModes();
     emacsNode.checked = true;
-    import('monaco-emacs')
+    import(/* webpackChunkName: emacs */ 'monaco-emacs')
       .then(({ EmacsExtension, registerGlobalCommand, getAllMappings }) => {
         registerGlobalCommand('C-h', {
           description: 'Show this help command',
