@@ -14,17 +14,18 @@
   "license": "ISC",
   "dependencies": {
     "monaco-ace-tokenizer": "^0.1.1",
-    "monaco-editor": "0.18.1",
+    "monaco-editor": "^0.18.1",
     "monaco-emacs": "^0.2.0",
-    "monaco-themes": "0.3.3",
-    "monaco-vim": "0.1.4"
+    "monaco-themes": "^0.3.3",
+    "monaco-vim": "^0.1.4"
   },
   "devDependencies": {
     "@babel/core": "^7.7.2",
-    "babel-loader": "^8.0.6",
     "@babel/plugin-syntax-dynamic-import": "^7.2.0",
-    "babel-plugin-transform-class-properties": "^6.24.1",
     "@babel/preset-env": "^7.7.1",
+    "babel-loader": "^8.0.6",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-plugin-module-resolver": "^3.2.0",
     "css-loader": "^3.2.0",
     "firebase-tools": "^7.7.0",
     "html-webpack-plugin": "^3.2.0",

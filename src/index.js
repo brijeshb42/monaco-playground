@@ -74,7 +74,7 @@ function loadTheme(value) {
   }
 
   const themePath = themeList[value];
-  return import(/* webpackChunkName: theme/[request] */`monaco-themes/themes/${themePath}`)
+  return import(/* webpackChunkName: "theme"/[request] */`monaco-themes/themes/${themePath}`)
     .then((data) => {
       loadedThemes[value] = true;
       monaco.editor.defineTheme(value, data);
@@ -218,15 +218,24 @@ function disposeModes() {
   editor.removeOverlayWidget(helpWidget);
   statusNode.style.display = 'none';
   statusNode.innerHTML = '';
+  window.vimAdapter = undefined;
+  window.emacsMode = undefined;
 }
+
+function saveCurrentData() {
+  localStorage.setItem('currentvalue', editor.getValue());
+}
+
 vimNode.addEventListener('change', function(ev) {
   if (ev.target.checked) {
     disposeModes();
     vimNode.checked = true;
-    import(/* webpackChunkName: vim */ 'monaco-vim')
-      .then(({ initVimMode }) => {
+    import(/* webpackChunkName: "vim" */ 'monaco-vim')
+      .then(({ VimMode, initVimMode }) => {
+        VimMode.Vim.defineEx('write', 'w', saveCurrentData);
         vimAdapter = initVimMode(editor, statusNode);
         editor.focus();
+        window.vimAdapter = vimAdapter;
       });
   } else {
     disposeModes();
@@ -242,7 +251,7 @@ emacsNode.addEventListener('change', function(ev) {
   if (ev.target.checked) {
     disposeModes();
     emacsNode.checked = true;
-    import(/* webpackChunkName: emacs */ 'monaco-emacs')
+    import(/* webpackChunkName: "emacs" */ 'monaco-emacs')
       .then(({ EmacsExtension, registerGlobalCommand, getAllMappings }) => {
         registerGlobalCommand('C-h', {
           description: 'Show this help command',
@@ -267,6 +276,7 @@ emacsNode.addEventListener('change', function(ev) {
         });
         emacsMode.start();
         editor.focus();
+        window.emacsMode = emacsMode;
       });
   } else {
     disposeModes();
