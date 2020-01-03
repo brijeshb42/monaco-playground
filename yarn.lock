@@ -5001,10 +5001,10 @@ monaco-themes@^0.3.3:
   dependencies:
     fast-plist "^0.1.2"
 
-monaco-vim@^0.1.4:
-  version "0.1.4"
-  resolved "https://registry.yarnpkg.com/monaco-vim/-/monaco-vim-0.1.4.tgz#abf324203d5c597c8fd92b4a8050ba36a7a8ed20"
-  integrity sha512-oE6ckMHrWQt7rCGzn7yzor6aq0A3l8c0asfS2hbo7QM8b5dajMbboWoP3TMy9C0O51CYF7ZwdqcfoANb6ABW5g==
+monaco-vim@^0.1.5:
+  version "0.1.5"
+  resolved "https://registry.yarnpkg.com/monaco-vim/-/monaco-vim-0.1.5.tgz#dfa186ac7ede5640f94552193fcb3028c30fd7bb"
+  integrity sha512-6jFu4PoTrtU3vIAtkhds60OsLkKfdg1D0VaTSBMR6tCP0m8u1NHZUkSlFbKtA1Aa7lWy0DN8JCFP9Dp4/RzETQ==
 
 morgan@^1.8.2:
   version "1.9.1"
