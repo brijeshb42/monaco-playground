@@ -650,11 +650,6 @@
     lodash "^4.17.13"
     to-fast-properties "^2.0.0"
 
-"@types/anymatch@*":
-  version "1.3.1"
-  resolved "https://registry.yarnpkg.com/@types/anymatch/-/anymatch-1.3.1.tgz#336badc1beecb9dacc38bea2cf32adf627a8421a"
-  integrity sha512-/+CRPXpBDpo2RK9C68N3b2cOvO0Cf5B9aPijHsoDQTHivnGSObdOF2BRQOYjojWTDy6nQvMjmqRXIxH55VjxxA==
-
 "@types/events@*":
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/@types/events/-/events-3.0.0.tgz#2862f3f58a9a7f7c3e78d79f130dd4d71c25c2a7"
@@ -678,44 +673,6 @@
   version "12.12.8"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-12.12.8.tgz#dab418655af39ce2fa99286a0bed21ef8072ac9d"
   integrity sha512-XLla8N+iyfjvsa0KKV+BP/iGSoTmwxsu5Ci5sM33z9TjohF72DEz95iNvD6pPmemvbQgxAv/909G73gUn8QR7w==
-
-"@types/source-list-map@*":
-  version "0.1.2"
-  resolved "https://registry.yarnpkg.com/@types/source-list-map/-/source-list-map-0.1.2.tgz#0078836063ffaf17412349bba364087e0ac02ec9"
-  integrity sha512-K5K+yml8LTo9bWJI/rECfIPrGgxdpeNbj+d53lwN4QjW1MCwlkhUms+gtdzigTeUyBr09+u8BwOIY3MXvHdcsA==
-
-"@types/tapable@*":
-  version "1.0.4"
-  resolved "https://registry.yarnpkg.com/@types/tapable/-/tapable-1.0.4.tgz#b4ffc7dc97b498c969b360a41eee247f82616370"
-  integrity sha512-78AdXtlhpCHT0K3EytMpn4JNxaf5tbqbLcbIRoQIHzpTIyjpxLQKRoxU55ujBXAtg3Nl2h/XWvfDa9dsMOd0pQ==
-
-"@types/uglify-js@*":
-  version "3.0.4"
-  resolved "https://registry.yarnpkg.com/@types/uglify-js/-/uglify-js-3.0.4.tgz#96beae23df6f561862a830b4288a49e86baac082"
-  integrity sha512-SudIN9TRJ+v8g5pTG8RRCqfqTMNqgWCKKd3vtynhGzkIIjxaicNAMuY5TRadJ6tzDu3Dotf3ngaMILtmOdmWEQ==
-  dependencies:
-    source-map "^0.6.1"
-
-"@types/webpack-sources@*":
-  version "0.1.5"
-  resolved "https://registry.yarnpkg.com/@types/webpack-sources/-/webpack-sources-0.1.5.tgz#be47c10f783d3d6efe1471ff7f042611bd464a92"
-  integrity sha512-zfvjpp7jiafSmrzJ2/i3LqOyTYTuJ7u1KOXlKgDlvsj9Rr0x7ZiYu5lZbXwobL7lmsRNtPXlBfmaUD8eU2Hu8w==
-  dependencies:
-    "@types/node" "*"
-    "@types/source-list-map" "*"
-    source-map "^0.6.1"
-
-"@types/webpack@^4.4.19":
-  version "4.39.9"
-  resolved "https://registry.yarnpkg.com/@types/webpack/-/webpack-4.39.9.tgz#a8c7d0ba14631023e75ae1b5bd0bfad3cf2cba4c"
-  integrity sha512-p6GjQ+x86XyQd32IS3rYlisEpkuP8/DCW87mxpzAUs4McmKus7mD+cCEDaMIJIFfLW6cyYHfD+xEo/xREpT9lA==
-  dependencies:
-    "@types/anymatch" "*"
-    "@types/node" "*"
-    "@types/tapable" "*"
-    "@types/uglify-js" "*"
-    "@types/webpack-sources" "*"
-    source-map "^0.6.0"
 
 "@webassemblyjs/ast@1.8.5":
   version "1.8.5"
@@ -3052,6 +3009,14 @@ figures@^2.0.0:
   dependencies:
     escape-string-regexp "^1.0.5"
 
+file-loader@^5.0.2:
+  version "5.0.2"
+  resolved "https://registry.yarnpkg.com/file-loader/-/file-loader-5.0.2.tgz#7f3d8b4ac85a5e8df61338cfec95d7405f971caa"
+  integrity sha512-QMiQ+WBkGLejKe81HU8SZ9PovsU/5uaLo0JdTCEXOYv7i7jfAjHZi1tcwp9tSASJPOmmHZtbdCervFmXMH/Dcg==
+  dependencies:
+    loader-utils "^1.2.3"
+    schema-utils "^2.5.0"
+
 filesize@^3.1.3:
   version "3.6.1"
   resolved "https://registry.yarnpkg.com/filesize/-/filesize-3.6.1.tgz#090bb3ee01b6f801a8a8be99d31710b3422bb317"
@@ -4975,17 +4940,17 @@ monaco-ace-tokenizer@^0.1.1:
   resolved "https://registry.yarnpkg.com/monaco-ace-tokenizer/-/monaco-ace-tokenizer-0.1.1.tgz#710f00b2e2d9663a2a632db5ca8dfc386ebd1f99"
   integrity sha512-17rMKkj2YKGIfslKXNhMydv4ewX+QO3/bTzcR+WKscinUcL/I03g2ImvokdvOy3syfb918cwOPQU2Jj7hEzFjA==
 
-monaco-editor-webpack-plugin@^1.7.0:
-  version "1.7.0"
-  resolved "https://registry.yarnpkg.com/monaco-editor-webpack-plugin/-/monaco-editor-webpack-plugin-1.7.0.tgz#920cbeecca25f15d70d568a7e11b0ba4daf1ae83"
-  integrity sha512-oItymcnlL14Sjd7EF7q+CMhucfwR/2BxsqrXIBrWL6LQplFfAfV+grLEQRmVHeGSBZ/Gk9ptzfueXnWcoEcFuA==
+monaco-editor-webpack-plugin@^1.8.0:
+  version "1.8.1"
+  resolved "https://registry.yarnpkg.com/monaco-editor-webpack-plugin/-/monaco-editor-webpack-plugin-1.8.1.tgz#5701bfce16c14c51503a607726d97fd92784af26"
+  integrity sha512-kf97Oyyz7E9BTujAvf7eary40aEB2rrHpaiSdD9p6SOwItk64mU9mGx6+S8Ku9B4RikL9aj/sK/7DinlBYj3AQ==
   dependencies:
-    "@types/webpack" "^4.4.19"
+    loader-utils "^1.2.3"
 
-monaco-editor@^0.18.1:
-  version "0.18.1"
-  resolved "https://registry.yarnpkg.com/monaco-editor/-/monaco-editor-0.18.1.tgz#ced7c305a23109875feeaf395a504b91f6358cfc"
-  integrity sha512-fmL+RFZ2Hrezy+X/5ZczQW51LUmvzfcqOurnkCIRFTyjdVjzR7JvENzI6+VKBJzJdPh6EYL4RoWl92b2Hrk9fw==
+monaco-editor@^0.19.0:
+  version "0.19.0"
+  resolved "https://registry.yarnpkg.com/monaco-editor/-/monaco-editor-0.19.0.tgz#c6e774210f3b292ff739e96f45a1cc78bf5ac2e7"
+  integrity sha512-ida++HI/s9V8ma8yYS9CAS0UJEFwW1gbt9G6oviEdv/aHhFd/kV3sXrINqC63TVdKzOZdKjPRRCOPJJ80zvLbw==
 
 monaco-emacs@^0.2.0:
   version "0.2.0"
@@ -5001,10 +4966,10 @@ monaco-themes@^0.3.3:
   dependencies:
     fast-plist "^0.1.2"
 
-monaco-vim@^0.1.5:
-  version "0.1.5"
-  resolved "https://registry.yarnpkg.com/monaco-vim/-/monaco-vim-0.1.5.tgz#dfa186ac7ede5640f94552193fcb3028c30fd7bb"
-  integrity sha512-6jFu4PoTrtU3vIAtkhds60OsLkKfdg1D0VaTSBMR6tCP0m8u1NHZUkSlFbKtA1Aa7lWy0DN8JCFP9Dp4/RzETQ==
+monaco-vim@^0.1.6:
+  version "0.1.6"
+  resolved "https://registry.yarnpkg.com/monaco-vim/-/monaco-vim-0.1.6.tgz#143246034d8f8f147f61ea879a701a8e38a2f90d"
+  integrity sha512-KVvF/53JOunYhYFjv/IZtaTJqlC3+1Z45PrWyW1C3SWegCu0L7R/ZaSbdpiJtFm3U0RHJwrflLmoy9T6wMWETA==
 
 morgan@^1.8.2:
   version "1.9.1"
@@ -6363,6 +6328,14 @@ schema-utils@^2.0.0, schema-utils@^2.0.1:
   version "2.5.0"
   resolved "https://registry.yarnpkg.com/schema-utils/-/schema-utils-2.5.0.tgz#8f254f618d402cc80257486213c8970edfd7c22f"
   integrity sha512-32ISrwW2scPXHUSusP8qMg5dLUawKkyV+/qIEV9JdXKx+rsM6mi8vZY8khg2M69Qom16rtroWXD3Ybtiws38gQ==
+  dependencies:
+    ajv "^6.10.2"
+    ajv-keywords "^3.4.1"
+
+schema-utils@^2.5.0:
+  version "2.6.1"
+  resolved "https://registry.yarnpkg.com/schema-utils/-/schema-utils-2.6.1.tgz#eb78f0b945c7bcfa2082b3565e8db3548011dc4f"
+  integrity sha512-0WXHDs1VDJyo+Zqs9TKLKyD/h7yDpHUhEFsM2CzkICFdoX1av+GBq/J2xRTFfsQO5kBfhZzANf2VcIm84jqDbg==
   dependencies:
     ajv "^6.10.2"
     ajv-keywords "^3.4.1"
