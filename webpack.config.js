@@ -1,14 +1,13 @@
-const path = require('path');
-const webpack = require('webpack');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const MonacoWebpackPlugin = require('monaco-editor-webpack-plugin');
+const path = require("path");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const MonacoWebpackPlugin = require("monaco-editor-webpack-plugin");
 // const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 
 module.exports = {
-  target: 'web',
+  target: "web",
   entry: {
-    bundle: './src/index.js',
+    bundle: "./src/index.js",
     // "editor.worker": 'monaco-editor/esm/vs/editor/editor.worker.js',
     // "json.worker": 'monaco-editor/esm/vs/language/json/json.worker',
     // "css.worker": 'monaco-editor/esm/vs/language/css/css.worker',
@@ -16,13 +15,13 @@ module.exports = {
     // "ts.worker": 'monaco-editor/esm/vs/language/typescript/ts.worker',
   },
   output: {
-    path: path.resolve(__dirname, 'dist'),
-    filename: '[name].[chunkhash].js',
-    globalObject: 'self',
-    chunkFilename: '[name].[chunkhash].js',
+    path: path.resolve(__dirname, "dist"),
+    filename: "[name].[chunkhash].js",
+    globalObject: "self",
+    chunkFilename: "[name].[chunkhash].js",
   },
   optimization: {
-    runtimeChunk: 'single',
+    runtimeChunk: "single",
     // minimizer: [
     //   new UglifyJsPlugin({
     //     cache: true,
@@ -37,32 +36,33 @@ module.exports = {
     // ]
   },
   module: {
-    rules: [{
-      test: /\.js$/,
-      exclude: /node_modules/,
-      use: {
-        loader: 'babel-loader',
-        options: {
-          compact: false,
+    rules: [
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        use: {
+          loader: "babel-loader",
+          options: {
+            compact: false,
+          },
         },
       },
-    }, {
-      test: /\.css$/,
-      use: [
-        'style-loader',
-        'css-loader',
-      ],
-    }, {
-      test: /\.ttf/,
-      use: 'file-loader',
-    }],
+      {
+        test: /\.css$/,
+        use: ["style-loader", "css-loader"],
+      },
+      {
+        test: /\.ttf/,
+        use: "file-loader",
+      },
+    ],
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: path.join(__dirname, './index.html'),
+      template: path.join(__dirname, "./index.html"),
     }),
     new MiniCssExtractPlugin({
-      filename: '[name].css',
+      filename: "[name].css",
     }),
     new MonacoWebpackPlugin(),
   ],

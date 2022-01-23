@@ -74,7 +74,7 @@ function loadTheme(value) {
   }
 
   const themePath = themeList[value];
-  return import(/* webpackChunkName: "theme"/[request] */`monaco-themes/themes/${themePath}`)
+  return import(/* webpackChunkName: "theme/[request]" */`monaco-themes/themes/${themePath}`)
     .then((data) => {
       loadedThemes[value] = true;
       monaco.editor.defineTheme(value, data);
