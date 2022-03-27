@@ -5343,15 +5343,15 @@ monaco-editor-webpack-plugin@^7.0.1:
   dependencies:
     loader-utils "^2.0.2"
 
-monaco-editor@^0.31.1:
-  version "0.31.1"
-  resolved "https://registry.yarnpkg.com/monaco-editor/-/monaco-editor-0.31.1.tgz#67f597b3e45679d1f551237e12a3a42c4438b97b"
-  integrity sha512-FYPwxGZAeP6mRRyrr5XTGHD9gRXVjy7GUzF4IPChnyt3fS5WrNxIkS8DNujWf6EQy0Zlzpxw8oTVE+mWI2/D1Q==
+monaco-editor@^0.33.0:
+  version "0.33.0"
+  resolved "https://registry.yarnpkg.com/monaco-editor/-/monaco-editor-0.33.0.tgz#842e244f3750a2482f8a29c676b5684e75ff34af"
+  integrity sha512-VcRWPSLIUEgQJQIE0pVT8FcGBIgFoxz7jtqctE+IiCxWugD0DwgyQBcZBhdSrdMC84eumoqMZsGl2GTreOzwqw==
 
-monaco-emacs@^0.2.2:
-  version "0.2.2"
-  resolved "https://registry.yarnpkg.com/monaco-emacs/-/monaco-emacs-0.2.2.tgz#798cb7a71a26ee7067581e4c8745be5869c82110"
-  integrity sha512-v2FefXBSRc5WZC5jbfJ1F+kj1Nh4EO5Zxfubh8v4k/npveJzh0VmVUkMlpi1IeodcM4vIuJVZglpFr6ZM70Bkg==
+monaco-emacs@^0.3.0:
+  version "0.3.0"
+  resolved "https://registry.yarnpkg.com/monaco-emacs/-/monaco-emacs-0.3.0.tgz#f82613771f8de4706ad1ce1f4f9bf9f59c5c28e4"
+  integrity sha512-T7uyCIqpLBmU2dO9pzQ3KTUt2RNOFtqLVQZA0lF8oJ2nphnomSNl29WpkTCJKJVFMmGKauPVB9fknEMFibEwCA==
   dependencies:
     lodash.kebabcase "^4.1.1"
     lodash.throttle "^4.1.1"
@@ -5363,10 +5363,10 @@ monaco-themes@^0.4.0:
   dependencies:
     fast-plist "^0.1.2"
 
-monaco-vim@^0.1.19:
-  version "0.1.19"
-  resolved "https://registry.yarnpkg.com/monaco-vim/-/monaco-vim-0.1.19.tgz#b7413ba35a8d35161b099abdc85de5ed5967b1ab"
-  integrity sha512-FtFh1NYCtHbNb2mQ+j4jZTetOnlNWl/yII2Yn5lyqdR12qWpmysJ5AaRnEeTFgYDbByoliySzExu/eNKT55gsA==
+monaco-vim@^0.3.0:
+  version "0.3.0"
+  resolved "https://registry.yarnpkg.com/monaco-vim/-/monaco-vim-0.3.0.tgz#b37af7bda7abbb32072d680499002d8f7a26a3a7"
+  integrity sha512-u9E8uDhh/givhMdMCgLwpP2Nzc7mbm9OIrpknb/hL0N71d40dZbnuZRrUnFUP4pI9rrMeyVZANf5KbUH99Mong==
 
 morgan@^1.10.0:
   version "1.10.0"
