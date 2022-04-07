@@ -13,11 +13,11 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "monaco-ace-tokenizer": "^0.2.1",
+    "monaco-ace-tokenizer": "^0.2.2",
     "monaco-editor": "^0.33.0",
     "monaco-emacs": "^0.3.0",
-    "monaco-themes": "^0.4.0",
-    "monaco-vim": "^0.3.0"
+    "monaco-themes": "^0.4.1",
+    "monaco-vim": "^0.3.3"
   },
   "devDependencies": {
     "@babel/core": "^7.16.12",

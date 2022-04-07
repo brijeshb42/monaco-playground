@@ -5331,10 +5331,10 @@ mkdirp@^1.0.3, mkdirp@^1.0.4:
   resolved "https://registry.yarnpkg.com/mkdirp/-/mkdirp-1.0.4.tgz#3eb5ed62622756d79a5f0e2a221dfebad75c2f7e"
   integrity sha512-vVqVZQyf3WLx2Shd0qJ9xuvqgAyKPLAiqITEtqW0oIUjzo3PePDd6fW9iFz30ef7Ysp/oiWqbhszeGWW2T6Gzw==
 
-monaco-ace-tokenizer@^0.2.1:
-  version "0.2.1"
-  resolved "https://registry.yarnpkg.com/monaco-ace-tokenizer/-/monaco-ace-tokenizer-0.2.1.tgz#87f286570b60b276640f0757d5d62e0bf3cc22f3"
-  integrity sha512-sR0mTmaZgSrYjx6PmD+FXq52R8TaUIbcmmJSpwn/t+6EpVLZvILA5oml8htYArMKtMDBier+/ljTgqus3pCetw==
+monaco-ace-tokenizer@^0.2.2:
+  version "0.2.2"
+  resolved "https://registry.yarnpkg.com/monaco-ace-tokenizer/-/monaco-ace-tokenizer-0.2.2.tgz#1e2bbc3e46934f4c4cf56b1f22abf952820c1b27"
+  integrity sha512-4ygK//nP36aDXTtjVnnPW8Y/YLkmHlW7117b/D8uRpiVN7hNWM7ewyEbVIShwjarRqfUZwEg/kIOVhcLmRi3+Q==
 
 monaco-editor-webpack-plugin@^7.0.1:
   version "7.0.1"
@@ -5356,17 +5356,17 @@ monaco-emacs@^0.3.0:
     lodash.kebabcase "^4.1.1"
     lodash.throttle "^4.1.1"
 
-monaco-themes@^0.4.0:
-  version "0.4.0"
-  resolved "https://registry.yarnpkg.com/monaco-themes/-/monaco-themes-0.4.0.tgz#4bcb0584efdf6586a5edb76287e7e51457f591cd"
-  integrity sha512-AJL7Sk3j1DrQo94RqaYBr+IrGNP/2f5drFkKXKyjNZHYY/j+2Pv+O4+WETYkrTj9m1Zm2K3YRuGP/I3+5rHPxw==
+monaco-themes@^0.4.1:
+  version "0.4.1"
+  resolved "https://registry.yarnpkg.com/monaco-themes/-/monaco-themes-0.4.1.tgz#ecd3eb078feeb690c89a310207848425a08e1a17"
+  integrity sha512-D7BcGWxtdIlh6YyWcTTZessPho/272eeOOKs7RWEcBw+3vS7LvrXidaCPPmPp3bwAoHu3ALkS8nB925YK1SviQ==
   dependencies:
     fast-plist "^0.1.2"
 
-monaco-vim@^0.3.0:
-  version "0.3.0"
-  resolved "https://registry.yarnpkg.com/monaco-vim/-/monaco-vim-0.3.0.tgz#b37af7bda7abbb32072d680499002d8f7a26a3a7"
-  integrity sha512-u9E8uDhh/givhMdMCgLwpP2Nzc7mbm9OIrpknb/hL0N71d40dZbnuZRrUnFUP4pI9rrMeyVZANf5KbUH99Mong==
+monaco-vim@^0.3.3:
+  version "0.3.3"
+  resolved "https://registry.yarnpkg.com/monaco-vim/-/monaco-vim-0.3.3.tgz#01eb99df11da9dd22ba1b02d9c58cf8fdb4bb677"
+  integrity sha512-hN2T1IVKhfoeeypVEfJlRcg+3liH/XsF28w28/09pdpMWxZwMRLOrSlHjTd+nAqV/hBi42vSkvg+zbi13v3CDg==
 
 morgan@^1.10.0:
   version "1.10.0"
