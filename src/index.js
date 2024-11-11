@@ -100,7 +100,7 @@ const codeSamples = {
   },
   kotlin: {
     text: '',
-    url: 'https://raw.githubusercontent.com/JetBrains/kotlin/master/core/builtins/src/kotlin/Annotations.kt',
+    url: 'https://raw.githubusercontent.com/libre-tube/LibreTube/refs/heads/master/app/src/main/java/com/github/libretube/api/ExternalApi.kt',
   },
   clojure: {
     text: '',
